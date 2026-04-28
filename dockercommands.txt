@@ -3,3 +3,10 @@ dotnet publish --os linux --arch x64 /t:PublishContainer -c Release -p:Container
 
 run the image locally
 docker run -p 5000:8080 -p 5001:8081 --rm conferenceattendees-api:1.2
+
+add SEQ
+docker pull datalust/seq
+
+docker run --name seq -d --restart unless-stopped -e ACCEPT_EULA=Y -e SEQ_PASSWORD=Rav1K1ran! -p 5341:80 datalust/seq:latest
+
+login and change password to Admin-123
